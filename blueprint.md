@@ -28,13 +28,11 @@ Dozo is a Flutter application designed to showcase a modern, themed UI with a cl
   - A centered title displaying "Orders".
   - A theme toggle `IconButton` on the far left (in the `leading` position) to switch between light and dark modes.
   - A profile `IconButton` on the far right (in the `actions` list).
-- **Search Bar**: A search bar is present at the top of the `OrdersScreen` body, styled to match the current theme (light/dark).
+- **Search Bar**: A search bar is present at the top of the `OrdersScreen` body. It has increased horizontal padding to appear narrower and is styled to match the current theme.
 
 ## Plan for Current Change
 
-**Request:** "in orders_screen.dart. add a search bar in the body top. but not inside the appbar"
+**Request:** "reduce the width of the search bar"
 
 **Completed Steps:**
-1.  **Create `search_bar.dart` widget**: Created a new reusable widget for the search bar UI at `lib/features/orders/presentation/widgets/search_bar.dart`. This widget adapts its colors based on the current theme.
-2.  **Update `orders_screen.dart`**: Modified `lib/features/orders/presentation/views/orders_screen.dart` to include the `OrdersSearchBar` at the top of a `Column` in the body.
-3.  **File Correction**: Initially created a duplicate `orders_screen.dart` but corrected this by moving the logic to the correct file in the `views` subdirectory and deleting the duplicate.
+1.  **Update `search_bar.dart`**: Increased the horizontal `padding` on the `Padding` widget wrapping the `TextField` from `16.0` to `40.0` on each side to reduce the visual width of the search bar.

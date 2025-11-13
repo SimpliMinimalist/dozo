@@ -14,7 +14,7 @@ class OrdersSearchBar extends StatelessWidget {
     final searchBarIconColor = isDarkMode ? iconDark : iconLight;
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0),
+      padding: const EdgeInsets.fromLTRB(40.0, 16.0, 40.0, 8.0),
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Search Orders...',
