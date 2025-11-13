@@ -15,6 +15,7 @@ Dozo is a Flutter application designed to showcase a modern, themed UI with a cl
   - `light_theme.dart`: Defines the `ThemeData` for the light theme.
   - `dark_theme.dart`: Defines the `ThemeData` for the dark theme.
   - `colors.dart`: Defines the color constants for both light and dark themes.
+  - `theme_extension.dart`: A theme extension to provide easy access to custom theme properties.
 
 ### Features
 - **Orders (`lib/features/orders`)**
@@ -28,11 +29,8 @@ Dozo is a Flutter application designed to showcase a modern, themed UI with a cl
   - A centered title displaying "Orders".
   - A theme toggle `IconButton` on the far left (in the `leading` position) to switch between light and dark modes.
   - A profile `IconButton` on the far right (in the `actions` list).
-- **Search Bar**: A search bar is present at the top of the `OrdersScreen` body. It has increased horizontal padding to appear narrower and is styled to match the current theme.
-
-## Plan for Current Change
-
-**Request:** "reduce the width of the search bar"
-
-**Completed Steps:**
-1.  **Update `search_bar.dart`**: Increased the horizontal `padding` on the `Padding` widget wrapping the `TextField` from `16.0` to `40.0` on each side to reduce the visual width of the search bar.
+- **Search Bar**: A search bar is present at the top of the `OrdersScreen` body.
+  - It has horizontal padding of `40.0` to appear narrower.
+  - The top padding has been adjusted for better spacing.
+  - It features a custom SVG search icon with an adjusted size.
+  - The colors are styled to match the current theme.

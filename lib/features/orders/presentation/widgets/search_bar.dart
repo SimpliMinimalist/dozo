@@ -13,10 +13,10 @@ class OrdersSearchBar extends StatelessWidget {
     final searchBarPlaceholderColor =
         isDarkMode ? searchBarPlaceholderDark : searchBarPlaceholderLight;
     // Using the color constants directly
-    final searchBarIconColor = isDarkMode ? iconDark : iconLight; 
+    final searchBarIconColor = isDarkMode ? iconDark : iconLight;
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(40.0, 24.0, 40.0, 8.0),
+      padding: const EdgeInsets.fromLTRB(40.0, 28.0, 40.0, 8.0),
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Search Orders...',
@@ -25,7 +25,10 @@ class OrdersSearchBar extends StatelessWidget {
             padding: const EdgeInsets.all(12.0),
             child: SvgPicture.asset(
               'assets/icons/search.svg',
-              colorFilter: ColorFilter.mode(searchBarIconColor, BlendMode.srcIn),
+              width: 20,
+              height: 20,
+              colorFilter:
+                  ColorFilter.mode(searchBarIconColor, BlendMode.srcIn),
             ),
           ),
           filled: true,
