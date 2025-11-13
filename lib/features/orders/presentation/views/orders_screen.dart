@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:myapp/core/services/theme_provider.dart';
 import 'package:myapp/features/orders/presentation/widgets/order_summary_card.dart';
@@ -10,12 +11,15 @@ class OrdersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    final isDarkMode = themeProvider.themeMode == ThemeMode.dark;
+    final fabIconColor = Theme.of(context).floatingActionButtonTheme.foregroundColor;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Orders'),
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(themeProvider.themeMode == ThemeMode.dark ? Icons.light_mode : Icons.dark_mode),
+          icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
           onPressed: () => themeProvider.toggleTheme(),
           tooltip: 'Toggle Theme',
         ),
@@ -74,7 +78,15 @@ class OrdersScreen extends StatelessWidget {
         onPressed: () {
           // Add your onPressed code here!
         },
-        child: const Icon(Icons.search),
+        child: SvgPicture.asset(
+          'assets/icons/store.svg',
+          width: 24,
+          height: 24,
+          colorFilter: ColorFilter.mode(
+            fabIconColor ?? (isDarkMode ? Colors.black : Colors.white),
+            BlendMode.srcIn,
+          ),
+        ),
       ),
     );
   }

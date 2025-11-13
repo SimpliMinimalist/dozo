@@ -23,11 +23,19 @@ This is a Flutter application designed to provide a dashboard for managing order
         - A custom SVG icon representing the order status.
         - The count of orders for that status.
         - The title of the status.
+    - **`FloatingActionButton`**: A FAB with a custom `store.svg` icon. The icon is theme-aware and resizes appropriately.
 - **Assets**:
     - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look. Icons are managed in the `assets/icons/` directory.
 
-### Current Plan: Initial Implementation
-The following steps were taken to create the initial version of the application:
+### Current Plan: FAB Icon Update
+The following steps were taken to update the `FloatingActionButton`:
+1.  **Custom Icon**: Replaced the default `Icon` with a custom `SvgPicture` using `store.svg`.
+2.  **Theming**: Made the icon's color theme-aware, using the `foregroundColor` from `floatingActionButtonTheme`.
+3.  **Sizing**: Adjusted the icon size for better visual balance.
+4.  **Deprecation Fix**: Replaced the deprecated `color` property with `colorFilter` for `SvgPicture`.
+
+---
+*Previous Plan: Initial Implementation*
 1.  **Project Setup**: Initialized a standard Flutter project.
 2.  **Dependency Management**: Added `provider` for state management and `flutter_svg` for using SVG assets.
 3.  **Theming Implementation**:
