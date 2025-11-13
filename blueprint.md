@@ -11,6 +11,7 @@ This is a Flutter application designed to provide a dashboard for managing order
 - **Structure**: The code is organized by feature, with a dedicated `features/orders` directory containing the views and widgets for the order summary screen. Core services like theme management are in `core/`.
 
 ### UI and Design
+- **Layout**: The main content area has adjusted horizontal padding to control the width of elements like the search bar and order cards.
 - **Theming**:
     - **Light/Dark Mode**: Full support for both light and dark themes.
     - **Theme Toggle**: A prominent icon in the `AppBar` allows users to instantly switch between themes.
@@ -27,8 +28,11 @@ This is a Flutter application designed to provide a dashboard for managing order
 - **Assets**:
     - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look. Icons are managed in the `assets/icons/` directory.
 
-### Current Plan: FAB Icon Update
-The following steps were taken to update the `FloatingActionButton`:
+### Current Plan: Layout Adjustment
+1.  **Padding Update**: Increased the horizontal padding in `OrdersScreen` to reduce the width of the `SearchBarWidget` and `OrderSummaryCard` widgets.
+
+---
+*Previous Plan: FAB Icon Update*
 1.  **Custom Icon**: Replaced the default `Icon` with a custom `SvgPicture` using `store.svg`.
 2.  **Theming**: Made the icon's color theme-aware, using the `foregroundColor` from `floatingActionButtonTheme`.
 3.  **Sizing**: Adjusted the icon size for better visual balance.

@@ -31,7 +31,7 @@ class OrdersScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 32.0),
         child: ListView(
           children: const [
             SizedBox(height: 20),
