@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           home: Scaffold(
             appBar: AppBar(
               centerTitle: true,
-              title: const Text('Orders'),
+              title: const Text('Dashboard'),
               leading: IconButton(
                   icon: Icon(themeProvider.themeMode == ThemeMode.dark ? Icons.light_mode : Icons.dark_mode),
                   onPressed: () => themeProvider.toggleTheme(),
