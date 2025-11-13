@@ -1,36 +1,44 @@
-# Dozo App Blueprint
+# Project Blueprint: Order Summary App
 
 ## Overview
 
-Dozo is a Flutter application designed to showcase a modern, themed UI with a clear separation of concerns. It features a theme provider for easy light/dark mode toggling, and a simple, elegant UI centered around an "Orders" screen.
+This is a Flutter application designed to provide a dashboard for managing orders. The main screen displays a summary of orders in different states, such as "To Pack," "In Transit," and "Delivered." The application is built with a clean, modern UI and supports both light and dark themes.
 
-## Project Structure & Features
+## Style, Design, and Features
 
-### Core
-- **`main.dart`**: Entry point of the application. Initializes the `ThemeProvider` and sets up the root `MyApp` widget.
-- **`app.dart`**: The main application widget. It builds the `MaterialApp` and includes the primary `Scaffold` with the main `AppBar` and body.
-- **Services (`lib/core/services`)**
-  - `theme_provider.dart`: A `ChangeNotifier` that manages the application's `ThemeMode` (light, dark, or system) and notifies listeners of changes.
-- **Themes (`lib/core/themes`)**
-  - `light_theme.dart`: Defines the `ThemeData` for the light theme.
-  - `dark_theme.dart`: Defines the `ThemeData` for the dark theme.
-  - `colors.dart`: Defines the color constants for both light and dark themes.
-  - `theme_extension.dart`: A theme extension to provide easy access to custom theme properties.
+### Architecture
+- **State Management**: The app uses the `provider` package for app-wide state management, specifically for managing the theme.
+- **Structure**: The code is organized by feature, with a dedicated `features/orders` directory containing the views and widgets for the order summary screen. Core services like theme management are in `core/`.
 
-### Features
-- **Orders (`lib/features/orders`)**
-  - **`views/orders_screen.dart`**: A stateless widget that displays the main orders view. It contains a search bar at the top and a placeholder for the order list.
-  - **`widgets/search_bar.dart`**: A dedicated widget for the search bar UI, placed within the `OrdersScreen`.
+### UI and Design
+- **Theming**:
+    - **Light/Dark Mode**: Full support for both light and dark themes.
+    - **Theme Toggle**: A prominent icon in the `AppBar` allows users to instantly switch between themes.
+    - **Centralized Theme Files**: `light_theme.dart` and `dark_theme.dart` define the color schemes and component styles, ensuring a consistent look and feel.
+- **Components**:
+    - **`OrdersScreen`**: The main screen that houses the order summaries.
+    - **`SearchBarWidget`**: A simple, clean search input field at the top of the screen.
+    - **`OrderSummaryCard`**: A reusable card widget to display a specific order status. Each card features:
+        - A colored circular background for an icon.
+        - A custom SVG icon representing the order status.
+        - The count of orders for that status.
+        - The title of the status.
+- **Assets**:
+    - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look. Icons are managed in the `assets/icons/` directory.
 
-## Current Style & Design
-
-- **Theming**: The app uses the `provider` package for state management of the theme. It supports both a light and a dark theme, which can be toggled by the user.
-- **AppBar**: The main `AppBar` is configured with:
-  - A centered title displaying "Orders".
-  - A theme toggle `IconButton` on the far left (in the `leading` position) to switch between light and dark modes.
-  - A profile `IconButton` on the far right (in the `actions` list).
-- **Search Bar**: A search bar is present at the top of the `OrdersScreen` body.
-  - It has horizontal padding of `40.0` to appear narrower.
-  - The top padding has been adjusted for better spacing.
-  - It features a custom SVG search icon with an adjusted size.
-  - The colors are styled to match the current theme.
+### Current Plan: Initial Implementation
+The following steps were taken to create the initial version of the application:
+1.  **Project Setup**: Initialized a standard Flutter project.
+2.  **Dependency Management**: Added `provider` for state management and `flutter_svg` for using SVG assets.
+3.  **Theming Implementation**:
+    - Created a `ThemeProvider` class to manage the application's theme state.
+    - Defined `lightTheme` and `darkTheme` in separate files.
+    - Integrated the `ThemeProvider` into the `MyApp` widget.
+4.  **Feature Development: Orders Screen**:
+    - Created the main `OrdersScreen` view.
+    - Built the `SearchBarWidget` for future search functionality.
+    - Designed and implemented the `OrderSummaryCard` widget for displaying order statistics.
+    - Added custom SVG icons for each order status and declared them in `pubspec.yaml`.
+5.  **Bug Fixes**:
+    - Resolved a missing import for the `SearchBarWidget`.
+    - Fixed the theme toggle functionality by connecting the `onPressed` event in the `AppBar` to the `ThemeProvider`.
