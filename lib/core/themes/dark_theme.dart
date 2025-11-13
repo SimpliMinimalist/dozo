@@ -11,6 +11,9 @@ final darkTheme = ThemeData(
     iconTheme: IconThemeData(color: iconDark),
     titleTextStyle: TextStyle(color: textDark, fontSize: 20, fontWeight: FontWeight.bold)
   ),
+  searchBarTheme: SearchBarThemeData(
+    elevation: WidgetStateProperty.all(0.0),
+  ),
   colorScheme: const ColorScheme.dark(
     primary: primaryDark,
     secondary: primaryDark,

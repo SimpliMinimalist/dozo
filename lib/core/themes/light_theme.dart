@@ -12,6 +12,9 @@ final lightTheme = ThemeData(
     iconTheme: IconThemeData(color: iconLight),
     titleTextStyle: TextStyle(color: textLight, fontSize: 20, fontWeight: FontWeight.bold)
   ),
+  searchBarTheme: SearchBarThemeData(
+    elevation: WidgetStateProperty.all(0.0),
+  ),
   colorScheme: const ColorScheme.light(
     primary: primaryLight,
     secondary: primaryLight,
