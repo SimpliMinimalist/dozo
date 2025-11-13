@@ -9,6 +9,7 @@ final darkTheme = ThemeData(
     backgroundColor: topAppBarDark,
     elevation: 0,
     iconTheme: IconThemeData(color: iconDark),
+    titleTextStyle: TextStyle(color: textDark, fontSize: 20, fontWeight: FontWeight.bold)
   ),
   colorScheme: const ColorScheme.dark(
     primary: primaryDark,

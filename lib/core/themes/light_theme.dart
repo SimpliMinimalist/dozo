@@ -10,6 +10,7 @@ final lightTheme = ThemeData(
     backgroundColor: topAppBarLight,
     elevation: 0,
     iconTheme: IconThemeData(color: iconLight),
+    titleTextStyle: TextStyle(color: textLight, fontSize: 20, fontWeight: FontWeight.bold)
   ),
   colorScheme: const ColorScheme.light(
     primary: primaryLight,
