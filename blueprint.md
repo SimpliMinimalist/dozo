@@ -11,7 +11,9 @@ This is a Flutter application designed to provide a dashboard for managing order
 - **Structure**: The code is organized by feature, with a dedicated `features/orders` directory containing the views and widgets for the order summary screen. Core services like theme management are in `core/`.
 
 ### UI and Design
-- **Layout**: The main content area has adjusted horizontal padding to control the width of elements like the search bar and order cards.
+- **Layout**: 
+    - The main content area has adjusted horizontal padding to control the width of elements like the search bar and order cards.
+    - The vertical spacing between all elements on the order screen is now visually consistent.
 - **Theming**:
     - **Light/Dark Mode**: Full support for both light and dark themes.
     - **Theme Toggle**: A prominent icon in the `AppBar` allows users to instantly switch between themes.
@@ -26,7 +28,11 @@ This is a Flutter application designed to provide a dashboard for managing order
 - **Assets**:
     - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look.
 
-### Current Plan: Style Refinements
+### Current Plan: Layout Adjustment
+1.  **Vertical Spacing**: Adjusted the `SizedBox` between the `SearchBarWidget` and the first `OrderSummaryCard` to `14.0` to ensure visually consistent spacing between all elements on the screen.
+
+---
+*Previous Plan: Style Refinements*
 1.  **Search Bar Placeholder**: Further lightened the `searchBarPlaceholder` color in the theme extension to make the placeholder text even more subtle.
 
 ---

@@ -45,7 +45,7 @@ class OrdersScreen extends StatelessWidget {
           children: const [
             SizedBox(height: 20),
             SearchBarWidget(),
-            SizedBox(height: 20),
+            SizedBox(height: 14.0),
             OrderSummaryCard(
               iconPath: 'assets/icons/box.svg',
               iconColor: Colors.orange,
