@@ -25,10 +25,16 @@ This is a Flutter application designed to provide a dashboard for managing order
         - The count of orders for that status.
         - The title of the status.
     - **`FloatingActionButton`**: A FAB with a custom `store.svg` icon. The icon is theme-aware and resizes appropriately.
+    - **`AppBar`**: The top app bar now features a custom `profile.svg` icon, which is also theme-aware.
 - **Assets**:
     - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look. Icons are managed in the `assets/icons/` directory.
 
-### Current Plan: Layout Adjustment
+### Current Plan: Profile Icon Update
+1.  **Custom Icon**: Replaced the default `Icon(Icons.person)` with a custom `SvgPicture` using `profile.svg` in the `AppBar`.
+2.  **Theming**: Made the new icon's color theme-aware, using the `foregroundColor` from `appBarTheme`.
+
+---
+*Previous Plan: Layout Adjustment*
 1.  **Padding Update**: Increased the horizontal padding in `OrdersScreen` to reduce the width of the `SearchBarWidget` and `OrderSummaryCard` widgets.
 
 ---

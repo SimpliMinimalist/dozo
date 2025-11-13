@@ -13,6 +13,7 @@ class OrdersScreen extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final isDarkMode = themeProvider.themeMode == ThemeMode.dark;
     final fabIconColor = Theme.of(context).floatingActionButtonTheme.foregroundColor;
+    final appBarIconColor = Theme.of(context).appBarTheme.foregroundColor;
 
     return Scaffold(
       appBar: AppBar(
@@ -25,8 +26,16 @@ class OrdersScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.person),
             onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/icons/profile.svg',
+              width: 24,
+              height: 24,
+              colorFilter: ColorFilter.mode(
+                appBarIconColor ?? (isDarkMode ? Colors.white : Colors.black),
+                BlendMode.srcIn,
+              ),
+            ),
           ),
         ],
       ),
