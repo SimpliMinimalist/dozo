@@ -19,7 +19,7 @@ This is a Flutter application designed to provide a dashboard for managing order
     - **Custom Theme Extension**: A `ThemeExtension` provides custom colors, such as `searchBarPlaceholder`, for more granular control.
 - **Components**:
     - **`OrdersScreen`**: The main screen that houses the order summaries.
-    - **`SearchBarWidget`**: A simple, clean search input field with a subtle placeholder text color.
+    - **`SearchBarWidget`**: A simple, clean search input field with a very light placeholder text color for a subtle effect.
     - **`OrderSummaryCard`**: A reusable card widget with a softer, rounded border to display a specific order status.
     - **`FloatingActionButton`**: A FAB with a custom `store.svg` icon. The icon is theme-aware.
     - **`AppBar`**: The top app bar features a custom `profile.svg` icon, which is also theme-aware.
@@ -27,13 +27,17 @@ This is a Flutter application designed to provide a dashboard for managing order
     - **SVG Icons**: The app uses custom SVG icons for a sharp, scalable look.
 
 ### Current Plan: Style Refinements
+1.  **Search Bar Placeholder**: Further lightened the `searchBarPlaceholder` color in the theme extension to make the placeholder text even more subtle.
+
+---
+*Previous Plan: Style Refinements*
 1.  **Search Bar Placeholder**: Adjusted the `searchBarPlaceholder` color in the theme extension to reduce the contrast of the placeholder text.
 2.  **Card Border Radius**: Increased the border radius on the `OrderSummaryCard` from 12px to 15px for a softer appearance.
 
 ---
 *Previous Plan: Profile Icon Update*
 1.  **Custom Icon**: Replaced the default `Icon(Icons.person)` with a custom `SvgPicture` using `profile.svg` in the `AppBar`.
-2.  **Theming**: Made the new icon's color theme-aware, using the `foregroundColor` from `appBarTheme`.
+2.  **Theming**: Made the new icon's color theme-aware.
 
 ---
 *Previous Plan: Layout Adjustment*
