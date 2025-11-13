@@ -20,12 +20,20 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: Scaffold(
             appBar: AppBar(
+              centerTitle: true,
               title: const Text('Orders'),
-              actions: [
-                IconButton(
+              leading: IconButton(
                   icon: Icon(themeProvider.themeMode == ThemeMode.dark ? Icons.light_mode : Icons.dark_mode),
                   onPressed: () => themeProvider.toggleTheme(),
                   tooltip: 'Toggle Theme',
+                ),
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.person),
+                  onPressed: () {
+                    // Handle profile icon tap
+                  },
+                  tooltip: 'Profile',
                 ),
               ],
             ),
