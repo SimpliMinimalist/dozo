@@ -21,7 +21,7 @@ class OrderSummaryCard extends StatelessWidget {
     return Card(
       elevation: 0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
+        borderRadius: BorderRadius.circular(15.0),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
