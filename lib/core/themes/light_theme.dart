@@ -16,5 +16,10 @@ final lightTheme = ThemeData(
     primary: primaryLight,
     secondary: primaryLight,
     surface: surfaceLight,
+    onSurface: textLight,
+  ),
+  inputDecorationTheme: const InputDecorationTheme(
+    fillColor: surfaceLight,
+    hintStyle: TextStyle(color: textLight,)
   ),
 );

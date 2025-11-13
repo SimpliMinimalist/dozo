@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:myapp/core/services/theme_provider.dart';
 import 'package:myapp/core/themes/light_theme.dart';
 import 'package:myapp/core/themes/dark_theme.dart';
-import 'package:myapp/features/orders/views/orders_screen.dart';
+import 'package:myapp/features/orders/presentation/views/orders_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

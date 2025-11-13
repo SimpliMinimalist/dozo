@@ -15,5 +15,10 @@ final darkTheme = ThemeData(
     primary: primaryDark,
     secondary: primaryDark,
     surface: surfaceDark,
+    onSurface: textDark,
+  ),
+  inputDecorationTheme: const InputDecorationTheme(
+    fillColor: surfaceDark,
+    hintStyle: TextStyle(color: textDark,)
   ),
 );
